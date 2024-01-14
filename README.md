@@ -1,28 +1,30 @@
 # crud-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Клиентское приложение для универсального взаимодействия с CRUD-сервером. Выполняет операции постраничного отображения, добавления и удаления элементов.
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+## Используемые технологии
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Vue 3
+- Vue Router
+- Axios
 
-## Project Setup
+## Установка проекта
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Конфигурация для разработки
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Конфигурация для сборки
 
 ```sh
 npm run build
