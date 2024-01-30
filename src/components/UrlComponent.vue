@@ -1,31 +1,28 @@
 <template>
     <section>
-        <input type="text" v-model="baseUrl">
-        <button v-on:click="saveUrl()">Сохранить</button>
+        <input type="text" class="url-input" v-model="url">
     </section>
 </template>
 
 <script>
     export default {
         name: 'UrlComponent',
-        data() {
-            return {
-                baseUrl: '',
-            }
-        },
-        created() {
-            let url = sessionStorage.getItem('baseUrl');
-            if (url) {
-                this.baseUrl = url;
-            } else {
-                this.baseUrl = 'http://localhost:8080/';
-                sessionStorage.setItem('baseUrl', this.baseUrl);
-            }
-        },
-        methods: {
-            saveUrl() {
-                sessionStorage.setItem('baseUrl', this.baseUrl);
+        computed: {
+            url: {
+                get() {
+                    return this.$store.getters.getApiUrl;
+                },
+                set (value) {
+                    this.$store.commit('saveApiUrl', value);
+                }
             }
         }
     }
 </script>
+
+<style>
+    .url-input {
+        margin-top: 1rem;
+        width: 100%;
+    }
+</style>
