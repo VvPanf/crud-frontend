@@ -10,6 +10,7 @@
 
 - Vue 3
 - Vue Router
+- Vuex
 - Axios
 
 ## Установка проекта
